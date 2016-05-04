@@ -3296,7 +3296,7 @@ svn co --username anonymous http://qeforge.qe-forge.org/svn/q-e/branches/espress
             vac_pos1 = (vacuum_pos - cell_length*eopreg*2.5) % cell_length
             vac_pos2 = (vacuum_pos + cell_length*eopreg*2.5) % cell_length
             vac_index1 = np.abs(np.array(average_data)[..., 0] - vac_pos1).argmin()
-            vac_index1 = np.abs(np.array(average_data)[..., 0] - vac_pos2).argmin()
+            vac_index2 = np.abs(np.array(average_data)[..., 0] - vac_pos2).argmin()
             vacuum_energy1 = average_data[vac_index1][1]
             vacuum_energy2 = average_data[vac_index2][1]
             wf = [vacuum_energy1 * rydberg - fermi_energy, vacuum_energy2 * rydberg - fermi_energy]
